@@ -1,0 +1,262 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - navigation "Toolbar":
+      - menu:
+        - group [ref=f4e3]:
+          - menuitem "About WordPress" [ref=f4e4] [cursor=pointer]
+        - group [ref=f4e7]:
+          - menuitem "BoloUp Go Agency" [ref=f4e8] [cursor=pointer]
+        - group [ref=f4e9]:
+          - menuitem "Customize" [ref=f4e10] [cursor=pointer]
+        - group [ref=f4e11]:
+          - menuitem "6 updates available" [ref=f4e12] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f4e14]: "6"
+        - group [ref=f4e16]:
+          - menuitem "0 Comments in moderation" [ref=f4e17] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f4e19]: "0"
+        - group [ref=f4e21]:
+          - menuitem "New" [ref=f4e22] [cursor=pointer]
+        - group [ref=f4e25]:
+          - menuitem "Edit Page" [ref=f4e26] [cursor=pointer]
+        - group [ref=f4e27]:
+          - menuitem "" [ref=f4e28] [cursor=pointer]
+        - group [ref=f4e30]:
+          - menuitem "SEO" [ref=f4e31] [cursor=pointer]:
+            - generic [ref=f4e35]: Focus keyphrase not set
+        - group [ref=f4e36]:
+          - menuitem " Notes" [ref=f4e37] [cursor=pointer]
+        - group [ref=f4e38]:
+          - menuitem "Hostinger" [ref=f4e39]
+      - menu [ref=f4e42]:
+        - group [ref=f4e43]:
+          - menuitem "Howdy, webdev" [ref=f4e44] [cursor=pointer]
+        - group [ref=f4e45]:
+          - menuitem "Search" [ref=f4e46]:
+            - generic [ref=f4e47]:
+              - textbox "Search" [ref=f4e48] [cursor=pointer]
+              - generic [ref=f4e49]: Search
+  - banner [ref=f4e50]:
+    - generic [ref=f4e51]:
+      - link "BoloUp Go Agency Official" [ref=f4e52] [cursor=pointer]:
+        - /url: "#hero"
+        - img "BoloUp Go Official Logo" [ref=f4e53]
+        - generic [ref=f4e54]: Agency
+      - navigation "Main Navigation" [ref=f4e55]:
+        - link "Home" [ref=f4e56] [cursor=pointer]:
+          - /url: "#hero"
+        - link "About" [ref=f4e57] [cursor=pointer]:
+          - /url: "#what-is-boloup"
+        - link "Benefits" [ref=f4e58] [cursor=pointer]:
+          - /url: "#benefits"
+        - link "Earnings" [ref=f4e59] [cursor=pointer]:
+          - /url: "#earnings"
+        - link "How to Join" [ref=f4e60] [cursor=pointer]:
+          - /url: "#registration"
+        - link "FAQs" [ref=f4e61] [cursor=pointer]:
+          - /url: "#faqs"
+      - generic [ref=f4e62]:
+        - link "Download App" [ref=f4e63] [cursor=pointer]:
+          - /url: https://share.bololinks.com/home/scode/47282
+        - link "Start Agency" [ref=f4e64] [cursor=pointer]:
+          - /url: "#registration"
+  - main [ref=f4e65]:
+    - generic [ref=f4e68]:
+      - generic [ref=f4e69]:
+        - generic [ref=f4e70]: BoloUp Go Official Agency Program
+        - heading "Build a Team That Grows with BoloUp Go Agency" [level=1] [ref=f4e71]
+        - paragraph [ref=f4e72]: Turn your network into something bigger. With BoloUp Go Agency, discover promising hosts, bring them into your team, and earn from your agency alongside the host you grow.
+        - generic [ref=f4e73]:
+          - link "Start Your BoloUp Agency" [ref=f4e74] [cursor=pointer]:
+            - /url: "#registration"
+          - link "Download BoloUp Go" [ref=f4e75] [cursor=pointer]:
+            - /url: https://share.bololinks.com/home/scode/47282
+      - img "Build a Team That Grows with BoloUp Go Agency" [ref=f4e79]
+    - generic [ref=f4e82]:
+      - generic [ref=f4e83]:
+        - generic [ref=f4e84]: Platform & Role Overview
+        - heading "Live Entertainment Meets Team-Building" [level=2] [ref=f4e85]
+        - generic [ref=f4e86]:
+          - paragraph [ref=f4e87]: BoloUp Go is a social entertainment app where people meet through live video, voice rooms, chat, virtual gifts, and interactive experiences.
+          - paragraph [ref=f4e89]: The agency side gives you a different way to take part. Instead of being the person in front of the camera, a BoloUp Go Agency agent works behind the scenes, recruiting hosts, helping them get started, and building a stronger team.
+          - paragraph [ref=f4e90]: It’s a role for people who enjoy spotting potential, helping creators, and earning on the side.
+      - generic [ref=f4e92]:
+        - img "Live Entertainment Meets Team-Building - BoloUp Ecosystem" [ref=f4e94]
+        - generic [ref=f4e95]:
+          - generic [ref=f4e96]: Live Video
+          - generic [ref=f4e100]: Voice Rooms
+          - generic [ref=f4e104]: Real-Time Chat
+          - generic [ref=f4e107]: Virtual Gifts
+          - generic [ref=f4e111]: Team-Building
+    - generic [ref=f4e118]:
+      - generic [ref=f4e119]:
+        - generic [ref=f4e120]: Exclusive Agent Advantages
+        - heading "Why Build Your Own BoloUp Go Agency?" [level=2] [ref=f4e121]
+      - generic [ref=f4e122]:
+        - article [ref=f4e123]:
+          - generic [aria-hidden]: "01"
+          - heading "1. Grow a Host Network of Your Own" [level=3] [ref=f4e130]
+          - paragraph [ref=f4e131]: Recruit hosts with potential and gradually build a team you can guide and manage as your agency develops.
+        - article [ref=f4e132]:
+          - generic [aria-hidden]: "02"
+          - heading "2. Help Hosts Perform at Their Best" [level=3] [ref=f4e136]
+          - paragraph [ref=f4e137]: A good agency does more than invite people. Give your hosts direction, encouragement, and to receive various weekly or monthly agency rewards.
+        - article [ref=f4e138]:
+          - generic [aria-hidden]: "03"
+          - heading "3. Create Growth Beyond Your Own Account" [level=3] [ref=f4e142]
+          - paragraph [ref=f4e143]: Your progress as an agent is connected to the team you build, giving you a way to grow your team and earnings at the same time.
+    - generic [ref=f4e145]:
+      - generic [ref=f4e146]:
+        - generic [ref=f4e147]: Revenue Potential
+        - heading "How Can a BoloUp Go Agency Earn?" [level=2] [ref=f4e148]
+      - generic [ref=f4e149]:
+        - article [ref=f4e150]:
+          - generic [ref=f4e151]: Direct Revenue
+          - heading "1. Host Performance Commission" [level=3] [ref=f4e155]
+          - paragraph [ref=f4e156]: Agents can earn commission based on eligible activity and income generated by hosts within their agency.
+        - article [ref=f4e157]:
+          - generic [ref=f4e158]: Network Expansion
+          - heading "2. Network and Sub-Agency Growth" [level=3] [ref=f4e166]
+          - paragraph [ref=f4e167]: Agents may expand their network through sub-agencies and earn the applicable commission structure.
+        - article [ref=f4e168]:
+          - generic [ref=f4e169]: Bonus Incentives
+          - heading "3. Agency Rewards and Incentives" [level=3] [ref=f4e173]
+          - paragraph [ref=f4e174]: Receive or participate in weekly, monthly, or seasonal events as an agent.
+      - link "Learn more about Host [boloupgo.live]" [ref=f4e176] [cursor=pointer]:
+        - /url: https://boloupgo.live
+    - generic [ref=f4e178]:
+      - generic [ref=f4e179]:
+        - generic [ref=f4e180]: Step by Step Onboarding
+        - heading "How to Join BoloUp Go Agency" [level=2] [ref=f4e181]
+      - generic [ref=f4e183]:
+        - article [ref=f4e184]:
+          - generic [ref=f4e185]:
+            - generic [ref=f4e186]: "1"
+            - heading "Step 1 – Download BoloUp Go" [level=3] [ref=f4e187]
+          - paragraph [ref=f4e188]:
+            - text: Install BoloUp Go
+            - link "using this link" [ref=f4e189] [cursor=pointer]:
+              - /url: https://share.bololinks.com/home/scode/47282
+            - text: and create your account using one of the available sign-up methods.
+          - img "Step 1 – Download BoloUp Go" [ref=f4e191]
+        - article [ref=f4e192]:
+          - generic [ref=f4e193]:
+            - generic [ref=f4e194]: "2"
+            - heading "Step 2 – Complete Your Profile and Verification" [level=3] [ref=f4e195]
+          - paragraph [ref=f4e196]: Set up your account information and complete face verification when required.
+          - img "Step 2 – Complete Your Profile and Verification" [ref=f4e198]
+        - article [ref=f4e199]:
+          - generic [ref=f4e200]:
+            - generic [ref=f4e201]: "3"
+            - heading "Step 3 – Open Your Agency Registration Invitation" [level=3] [ref=f4e202]
+          - paragraph [ref=f4e203]: Use the agency registration link provided to you (contact us for the link) and check the related invitation or notice inside BoloUp.
+          - generic [ref=f4e204]:
+            - generic [ref=f4e205]: Official BoloUp Agency ID
+            - generic [ref=f4e206]:
+              - generic [ref=f4e207]: "2527626"
+              - button "Copy Agency ID 2527626" [ref=f4e208] [cursor=pointer]:
+                - generic [ref=f4e212]: Copy Agency ID
+          - img "Step 3 – Open Your Agency Registration Invitation" [ref=f4e214]
+        - article [ref=f4e215]:
+          - generic [ref=f4e216]:
+            - generic [ref=f4e217]: "4"
+            - heading "Step 4 – Accept the Agency Invitation" [level=3] [ref=f4e218]
+          - paragraph [ref=f4e219]: Review the agency information and confirm that you want to continue with the registration.
+          - img "Step 4 – Accept the Agency Invitation" [ref=f4e221]
+        - article [ref=f4e222]:
+          - generic [ref=f4e223]:
+            - generic [ref=f4e224]: "5"
+            - heading "Step 5 – Add Your Agency Details" [level=3] [ref=f4e225]
+          - paragraph [ref=f4e226]: Enter the requested agency name and contact information carefully before submitting your application.
+          - img "Step 5 – Add Your Agency Details" [ref=f4e228]
+        - article [ref=f4e229]:
+          - generic [ref=f4e230]:
+            - generic [ref=f4e231]: "6"
+            - heading "Step 6 – Complete the Registration Process" [level=3] [ref=f4e232]
+          - paragraph [ref=f4e233]: Finish any remaining verification or approval steps shown in the app. Once approved, you can access your agency tools and begin building your team.
+          - img "Step 6 – Complete the Registration Process" [ref=f4e235]
+    - generic [ref=f4e237]:
+      - generic [ref=f4e238]:
+        - generic [ref=f4e239]: Help & Clarification
+        - heading "Frequently Asked Questions" [level=2] [ref=f4e240]
+      - generic [ref=f4e241]:
+        - article [ref=f4e242]:
+          - button "1 What is a BoloUp Go Agency?" [expanded] [ref=f4e243] [cursor=pointer]:
+            - generic [ref=f4e244]:
+              - generic [ref=f4e245]: "1"
+              - generic [ref=f4e246]: What is a BoloUp Go Agency?
+            - generic [aria-hidden] [ref=f4e247]: +
+          - paragraph [ref=f4e250]: A BoloUp Go Agency is a team structure that allows agents to recruit, manage, and support hosts on the platform. Instead of focusing mainly on hosting, agents focus on helping their team grow.
+        - article [ref=f4e251]:
+          - button "2 What does a BoloUp Go agent actually do?" [ref=f4e252] [cursor=pointer]:
+            - generic [ref=f4e253]:
+              - generic [ref=f4e254]: "2"
+              - generic [ref=f4e255]: What does a BoloUp Go agent actually do?
+            - generic [aria-hidden] [ref=f4e256]: +
+          - paragraph [ref=f4e258]: An agent looks for potential hosts, helps them join the agency, provides ongoing guidance, and supports their development. Managing a healthy and active host team is a key part of the role.
+        - article [ref=f4e259]:
+          - button "3 How does a BoloUp Go Agency make money?" [ref=f4e260] [cursor=pointer]:
+            - generic [ref=f4e261]:
+              - generic [ref=f4e262]: "3"
+              - generic [ref=f4e263]: How does a BoloUp Go Agency make money?
+            - generic [aria-hidden] [ref=f4e264]: +
+          - paragraph [ref=f4e266]: Agency earnings can be linked to eligible host activity, commissions, network performance, and other rewards available under the current BoloUp agency program. Actual earnings depend on performance and applicable program rules.
+    - generic [ref=f4e270]:
+      - heading "Become a BoloUp Go Agent" [level=2] [ref=f4e271]
+      - paragraph [ref=f4e272]: Your Next Great Team & Side Income Could Start Here
+      - link "Start Your BoloUp Agency" [ref=f4e274] [cursor=pointer]:
+        - /url: "#registration"
+  - contentinfo [ref=f4e275]:
+    - generic [ref=f4e276]:
+      - generic [ref=f4e277]:
+        - generic [ref=f4e278]:
+          - link "BoloUp Go Agency Home" [ref=f4e279] [cursor=pointer]:
+            - /url: "#hero"
+            - img "BoloUp Go Official Logo" [ref=f4e280]
+            - generic [ref=f4e281]: Agency
+          - paragraph [ref=f4e282]: BoloUp Go is a social entertainment app where people meet through live video, voice rooms, chat, virtual gifts, and interactive experiences. Turn your network into something bigger and grow your team with BoloUp Go Agency.
+        - generic [ref=f4e283]:
+          - heading "Navigation" [level=3] [ref=f4e284]
+          - list [ref=f4e285]:
+            - listitem [ref=f4e286]:
+              - link "Home" [ref=f4e287] [cursor=pointer]:
+                - /url: "#hero"
+            - listitem [ref=f4e288]:
+              - link "About BoloUp Go" [ref=f4e289] [cursor=pointer]:
+                - /url: "#what-is-boloup"
+            - listitem [ref=f4e290]:
+              - link "Agency Benefits" [ref=f4e291] [cursor=pointer]:
+                - /url: "#benefits"
+            - listitem [ref=f4e292]:
+              - link "How Agents Earn" [ref=f4e293] [cursor=pointer]:
+                - /url: "#earnings"
+        - generic [ref=f4e294]:
+          - heading "Agency Program" [level=3] [ref=f4e295]
+          - list [ref=f4e296]:
+            - listitem [ref=f4e297]:
+              - link "How to Join Agency" [ref=f4e298] [cursor=pointer]:
+                - /url: "#registration"
+            - listitem [ref=f4e299]:
+              - link "Frequently Asked Questions" [ref=f4e300] [cursor=pointer]:
+                - /url: "#faqs"
+            - listitem [ref=f4e301]:
+              - link "Host Program [boloupgo.live]" [ref=f4e302] [cursor=pointer]:
+                - /url: https://boloupgo.live
+            - listitem [ref=f4e303]:
+              - link "BoloUp Official Website" [ref=f4e304] [cursor=pointer]:
+                - /url: https://boloup.id
+        - generic [ref=f4e305]:
+          - heading "BoloUp App" [level=3] [ref=f4e306]
+          - list [ref=f4e307]:
+            - listitem [ref=f4e308]:
+              - link "Download BoloUp Go App" [ref=f4e309] [cursor=pointer]:
+                - /url: https://share.bololinks.com/home/scode/47282
+            - listitem [ref=f4e310]:
+              - 'link "Agency ID: 2527626" [ref=f4e311] [cursor=pointer]':
+                - /url: "#registration"
+            - listitem [ref=f4e312]:
+              - link "Alternative Download Link" [ref=f4e313] [cursor=pointer]:
+                - /url: https://boloup.onelink.me/PDV4/je5ueb58
+      - generic [ref=f4e314]:
+        - generic [ref=f4e315]: © 2026 BoloUp Go Agency (boloupgoagency.com). All rights reserved.
+        - generic [ref=f4e316]: Build, Manage & Grow Your Team from Everywhere
+  - button "Agent" [ref=f4e320] [cursor=pointer]

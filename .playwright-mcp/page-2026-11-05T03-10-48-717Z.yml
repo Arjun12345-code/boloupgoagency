@@ -1,0 +1,185 @@
+- generic [active] [ref=e1]:
+  - iframe [aria-hidden] [ref=e2]
+  - region
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - button "Langsung ke konten utama" [ref=e7] [cursor=pointer]
+      - button "Pintasan keyboard" [ref=e11] [cursor=pointer]
+      - button "Masukan aksesibilitas" [ref=e15] [cursor=pointer]
+    - banner [ref=e19]:
+      - generic [ref=e20]:
+        - link "Drive" [ref=e24] [cursor=pointer]:
+          - /url: https://drive.google.com/?tab=oo
+        - generic [ref=e28]:
+          - button "Aplikasi Google" [ref=e32] [cursor=pointer]
+          - link "Login" [ref=e36] [cursor=pointer]:
+            - /url: https://accounts.google.com/ServiceLogin?hl=id&passive=true&continue=https://drive.google.com/drive/folders/13KbSdIf-SujL29y2svvuKKkGUFpXTdC3&service=writely&ec=GAZAMQ
+    - generic [ref=e37]:
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - generic:
+            - navigation:
+              - heading "Jalur Folder" [ref=e49]
+              - list "Jalur Folder"
+        - toolbar [ref=e50]:
+          - radiogroup "Tata Letak Daftar atau Petak (Alt+V kemudian L)" [ref=e55]:
+            - generic [ref=e56]:
+              - radio "Daftar" [checked] [ref=e57] [cursor=pointer]
+              - radio "Kotak" [ref=e66] [cursor=pointer]
+      - main [ref=e76]:
+        - region [ref=e82]:
+          - generic [ref=e83]:
+            - grid "Daftar Item" [ref=e86]:
+              - rowgroup [ref=e87]:
+                - row [ref=e88]:
+                  - columnheader "Name" [ref=e89] [cursor=pointer]
+                  - columnheader "Date modified" [ref=e94] [cursor=pointer]
+                  - columnheader "File size" [ref=e96]
+                  - columnheader [ref=e97]:
+                    - generic [ref=e103]:
+                      - button "Urutkan" [ref=e105] [cursor=pointer]:
+                        - generic [aria-hidden] [ref=e111]: Urutkan
+                      - tooltip [aria-hidden] [ref=e112]: Lihat opsi pengurutan
+              - rowgroup [ref=e113]:
+                - row [ref=e114]:
+                  - gridcell [ref=e115]:
+                    - generic "BoloUp - Agency Registration - Step 1.png Image Shared" [ref=e128]:
+                      - strong [ref=e131]: BoloUp - Agency Registration - Step 1.png
+                      - img "Dibagikan" [ref=e134]
+                  - gridcell [ref=e139]:
+                    - generic "Modified 11 Mar" [ref=e143]: 11 Mar
+                  - gridcell [ref=e145]:
+                    - 'generic "Size: 227 KB Storage used: 227 KB" [ref=e149]': 227 KB
+                  - gridcell [ref=e151]
+                - row [ref=e155]:
+                  - gridcell [ref=e156]:
+                    - generic "BoloUp - Agency Registration - Step 2.png Image Shared" [ref=e169]:
+                      - strong [ref=e172]: BoloUp - Agency Registration - Step 2.png
+                      - img "Dibagikan" [ref=e175]
+                  - gridcell [ref=e180]:
+                    - generic "Modified 11 Mar" [ref=e184]: 11 Mar
+                  - gridcell [ref=e186]:
+                    - 'generic "Size: 745 KB Storage used: 745 KB" [ref=e190]': 745 KB
+                  - gridcell [ref=e192]
+                - row [ref=e196]:
+                  - gridcell [ref=e197]:
+                    - generic "BoloUp - Agency Registration - Step 3.png Image Shared" [ref=e210]:
+                      - strong [ref=e213]: BoloUp - Agency Registration - Step 3.png
+                      - img "Dibagikan" [ref=e216]
+                  - gridcell [ref=e221]:
+                    - generic "Modified 11 Mar" [ref=e225]: 11 Mar
+                  - gridcell [ref=e227]:
+                    - 'generic "Size: 1,5 MB Storage used: 1,5 MB" [ref=e231]': 1,5 MB
+                  - gridcell [ref=e233]
+                - row [ref=e237]:
+                  - gridcell [ref=e238]:
+                    - generic "BoloUp - Agency Registration - Step 4.png Image Shared" [ref=e251]:
+                      - strong [ref=e254]: BoloUp - Agency Registration - Step 4.png
+                      - img "Dibagikan" [ref=e257]
+                  - gridcell [ref=e262]:
+                    - generic "Modified 11 Mar" [ref=e266]: 11 Mar
+                  - gridcell [ref=e268]:
+                    - 'generic "Size: 140 KB Storage used: 140 KB" [ref=e272]': 140 KB
+                  - gridcell [ref=e274]
+                - row [ref=e278]:
+                  - gridcell [ref=e279]:
+                    - generic "BoloUp - Agent Add New Host Part 1.jpg Image Shared" [ref=e292]:
+                      - strong [ref=e295]: BoloUp - Agent Add New Host Part 1.jpg
+                      - img "Dibagikan" [ref=e298]
+                  - gridcell [ref=e303]:
+                    - generic "Modified 11 Mar" [ref=e307]: 11 Mar
+                  - gridcell [ref=e309]:
+                    - 'generic "Size: 123 KB Storage used: 123 KB" [ref=e313]': 123 KB
+                  - gridcell [ref=e315]
+                - row [ref=e319]:
+                  - gridcell [ref=e320]:
+                    - generic "BoloUp - Agent Add New Host Part 2.jpg Image Shared" [ref=e333]:
+                      - strong [ref=e336]: BoloUp - Agent Add New Host Part 2.jpg
+                      - img "Dibagikan" [ref=e339]
+                  - gridcell [ref=e344]:
+                    - generic "Modified 11 Mar" [ref=e348]: 11 Mar
+                  - gridcell [ref=e350]:
+                    - 'generic "Size: 102 KB Storage used: 102 KB" [ref=e354]': 102 KB
+                  - gridcell [ref=e356]
+                - row [ref=e360]:
+                  - gridcell [ref=e361]:
+                    - generic "BoloUp - AgentHost Withdraw.jpg Image Shared" [ref=e374]:
+                      - strong [ref=e377]: BoloUp - AgentHost Withdraw.jpg
+                      - img "Dibagikan" [ref=e380]
+                  - gridcell [ref=e385]:
+                    - generic "Modified 11 Mar" [ref=e389]: 11 Mar
+                  - gridcell [ref=e391]:
+                    - 'generic "Size: 162 KB Storage used: 162 KB" [ref=e395]': 162 KB
+                  - gridcell [ref=e397]
+                - row [ref=e401]:
+                  - gridcell [ref=e402]:
+                    - generic "BoloUp - Host Registration Guide Step 1.jpg Image Shared" [ref=e415]:
+                      - strong [ref=e418]: BoloUp - Host Registration Guide Step 1.jpg
+                      - img "Dibagikan" [ref=e421]
+                  - gridcell [ref=e426]:
+                    - generic "Modified 11 Mar" [ref=e430]: 11 Mar
+                  - gridcell [ref=e432]:
+                    - 'generic "Size: 80 KB Storage used: 80 KB" [ref=e436]': 80 KB
+                  - gridcell [ref=e438]
+                - row [ref=e442]:
+                  - gridcell [ref=e443]:
+                    - generic "BoloUp - Host Registration Guide Step 2.jpg Image Shared" [ref=e456]:
+                      - strong [ref=e459]: BoloUp - Host Registration Guide Step 2.jpg
+                      - img "Dibagikan" [ref=e462]
+                  - gridcell [ref=e467]:
+                    - generic "Modified 11 Mar" [ref=e471]: 11 Mar
+                  - gridcell [ref=e473]:
+                    - 'generic "Size: 78 KB Storage used: 78 KB" [ref=e477]': 78 KB
+                  - gridcell [ref=e479]
+                - row [ref=e483]:
+                  - gridcell [ref=e484]:
+                    - generic "BoloUp - Host Registration Guide Step 3.jpg Image Shared" [ref=e497]:
+                      - strong [ref=e500]: BoloUp - Host Registration Guide Step 3.jpg
+                      - img "Dibagikan" [ref=e503]
+                  - gridcell [ref=e508]:
+                    - generic "Modified 11 Mar" [ref=e512]: 11 Mar
+                  - gridcell [ref=e514]:
+                    - 'generic "Size: 91 KB Storage used: 91 KB" [ref=e518]': 91 KB
+                  - gridcell [ref=e520]
+                - row [ref=e524]:
+                  - gridcell [ref=e525]:
+                    - generic "BoloUp - Host Registration Guide Step 4.jpg Image Shared" [ref=e538]:
+                      - strong [ref=e541]: BoloUp - Host Registration Guide Step 4.jpg
+                      - img "Dibagikan" [ref=e544]
+                  - gridcell [ref=e549]:
+                    - generic "Modified 11 Mar" [ref=e553]: 11 Mar
+                  - gridcell [ref=e555]:
+                    - 'generic "Size: 55 KB Storage used: 55 KB" [ref=e559]': 55 KB
+                  - gridcell [ref=e561]
+                - row [ref=e565]:
+                  - gridcell [ref=e566]:
+                    - generic "BoloUp Agent Role.png Image Shared" [ref=e579]:
+                      - strong [ref=e582]: BoloUp Agent Role.png
+                      - img "Dibagikan" [ref=e585]
+                  - gridcell [ref=e590]:
+                    - generic "Modified 10 Okt" [ref=e594]: 10 Okt
+                  - gridcell [ref=e596]:
+                    - 'generic "Size: 869 KB Storage used: 869 KB" [ref=e600]': 869 KB
+                  - gridcell [ref=e602]
+                - row [ref=e606]:
+                  - gridcell [ref=e607]:
+                    - generic "BoloUp Ecosystem.png Image Shared" [ref=e620]:
+                      - strong [ref=e623]: BoloUp Ecosystem.png
+                      - img "Dibagikan" [ref=e626]
+                  - gridcell [ref=e631]:
+                    - generic "Modified 10 Okt" [ref=e635]: 10 Okt
+                  - gridcell [ref=e637]:
+                    - 'generic "Size: 879 KB Storage used: 879 KB" [ref=e641]': 879 KB
+                  - gridcell [ref=e643]
+                - row [ref=e647]:
+                  - gridcell [ref=e648]:
+                    - generic "BoloUp Host Role.png Image Shared" [ref=e661]:
+                      - strong [ref=e664]: BoloUp Host Role.png
+                      - img "Dibagikan" [ref=e667]
+                  - gridcell [ref=e672]:
+                    - generic "Modified 10 Okt" [ref=e676]: 10 Okt
+                  - gridcell [ref=e678]:
+                    - 'generic "Size: 862 KB Storage used: 862 KB" [ref=e682]': 862 KB
+                  - gridcell [ref=e684]
+            - progressbar [ref=e690]
+  - region

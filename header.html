@@ -1,0 +1,105 @@
+<!-- ==========================================================================
+     BoloUp Go Official - Header Component (header.html)
+     For WordPress Elementor Theme Builder Header Template
+     ========================================================================== -->
+<header class="header" id="header">
+  <div class="header-container">
+    <a href="#hero" class="brand-logo" id="brand-logo" aria-label="BoloUp">
+      <img src="assets/images/boloup-avatar-192x192.png"
+           alt="BoloUp Logo"
+           class="brand-logo-icon"
+           width="40"
+           height="40">
+      <span class="brand-name">BoloUp</span>
+    </a>
+
+    <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+      <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+      <a href="#earnings" class="nav-link" id="nav-earnings">Earnings</a>
+      <a href="#registration" class="nav-link" id="nav-registration">How to Join</a>
+      <a href="#faqs" class="nav-link" id="nav-faqs">FAQs</a>
+
+      <div class="mobile-nav-actions">
+        <a href="https://boloup.onelink.me/PDV4/je5ueb58" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-mobile-download">Download App</a>
+        <a href="https://share.bololinks.com/home/scode/63413" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-mobile-agent">Start Agency</a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://boloup.onelink.me/PDV4/je5ueb58" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="btn-header-download">Download App</a>
+      <a href="https://share.bololinks.com/home/scode/63413" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-header-agent">Start Agency</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<script>
+  (function () {
+    const header = document.getElementById('header');
+    if (header) {
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+      });
+    }
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuToggle && navMenu) {
+      function toggleMenu(open) {
+        const shouldOpen = open !== undefined ? open : !navMenu.classList.contains('active');
+        navMenu.classList.toggle('active', shouldOpen);
+        menuToggle.textContent = shouldOpen ? '\u2715' : '\u2630';
+        menuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+      }
+
+      menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          toggleMenu(false);
+        }
+      });
+
+      navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggleMenu(false);
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          toggleMenu(false);
+        }
+      });
+    }
+
+    // Active state highlighting on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    window.addEventListener('scroll', function () {
+      let current = '';
+      const scrollY = window.pageYOffset;
+      sections.forEach(function (section) {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  })();
+</script>

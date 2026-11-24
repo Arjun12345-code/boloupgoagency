@@ -1,0 +1,8 @@
+[    1338ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://boloupgoagency.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1:1
+[    1816ms] ReferenceError: elementorFrontendConfig is not defined
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:35864
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:151
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:55160
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:151
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:60015
+    at https://boloupgoagency.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5:1:60019

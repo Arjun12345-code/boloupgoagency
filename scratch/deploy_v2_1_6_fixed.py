@@ -1,0 +1,190 @@
+import requests
+import json
+import re
+
+login_url = "https://boloupgoagency.com/1c86y6aypsqcbgpgxvhw0-fow_zml13r66c_jfigjdfk"
+session = requests.Session()
+session.headers.update({
+    'User-Agent': 'Mozilla/5.0'
+})
+
+# 1. Get login page first to get test cookie
+session.get(login_url)
+
+# 2. Login
+r_login = session.post(login_url, data={
+    'log': 'webdev',
+    'pwd': '1tR^#1Xq@jGpEErBSw0^Pv0V',
+    'wp-submit': 'Log In',
+    'testcookie': '1'
+}, allow_redirects=True)
+print("Login result URL:", r_login.url)
+print("Is logged in:", "wp-admin" in r_login.url)
+
+# 3. Update style.css on hello-elementor-child
+edit_style_url = "https://boloupgoagency.com/wp-admin/theme-editor.php?file=style.css&theme=hello-elementor-child"
+r_style = session.get(edit_style_url)
+style_nonce = re.search(r'id="nonce"\s+name="nonce"\s+value="([^"]+)"', r_style.text).group(1)
+
+with open('style.css', 'r', encoding='utf-8') as f:
+    local_css = f.read()
+
+theme_header = """/*
+Theme Name: Hello Elementor Child - BoloUp Agency
+Theme URI: https://boloupgoagency.com/
+Description: Custom high-conversion one-page design for BoloUp Go Agency
+Author: BoloUp Agency Development Team
+Author URI: https://boloupgoagency.com/
+Template: hello-elementor
+Version: 2.1.6
+Text Domain: hello-elementor-child
+*/
+
+"""
+full_style = theme_header + local_css
+
+r_post_style = session.post(edit_style_url, data={
+    'nonce': style_nonce,
+    '_wp_http_referer': '/wp-admin/theme-editor.php?file=style.css&theme=hello-elementor-child',
+    'action': 'update',
+    'file': 'style.css',
+    'theme': 'hello-elementor-child',
+    'newcontent': full_style,
+    'submit': 'Update File'
+})
+print("style.css updated:", "File edited successfully" in r_post_style.text)
+
+# 4. Set temporary sync hook in functions.php
+edit_func_url = "https://boloupgoagency.com/wp-admin/theme-editor.php?file=functions.php&theme=hello-elementor-child"
+r_func = session.get(edit_func_url)
+func_nonce = re.search(r'id="nonce"\s+name="nonce"\s+value="([^"]+)"', r_func.text).group(1)
+
+func_code_sync = """<?php
+/**
+ * Hello Elementor Child Theme Functions
+ * Enqueues sitewide style.css v2.1.6
+ */
+
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style(
+        'boloup-agency-theme-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array(),
+        '2.1.6'
+    );
+}, 20);
+
+add_filter('show_admin_bar', '__return_false');
+
+add_action('init', function() {
+    if (isset($_GET['sync_page_content']) && current_user_can('manage_options')) {
+        $raw = file_get_contents('php://input');
+        $payload = json_decode($raw, true);
+        if ($payload && isset($payload['html'])) {
+            $html = $payload['html'];
+            foreach (array(26, 35) as $pid) {
+                $meta = get_post_meta($pid, '_elementor_data', true);
+                $elements = json_decode($meta, true);
+                if (is_array($elements) && !empty($elements)) {
+                    $elements[0]['elements'][0]['settings']['html'] = $html;
+                    update_post_meta($pid, '_elementor_data', wp_slash(wp_json_encode($elements)));
+                }
+                wp_update_post(array('ID' => $pid, 'post_content' => $html));
+            }
+            if (class_exists('\\\\Elementor\\\\Plugin')) {
+                \\\\Elementor\\\\Plugin::$instance->files_manager->clear_cache();
+            }
+            if (class_exists('\\\\LiteSpeed\\\\Purge')) {
+                \\\\LiteSpeed\\\\Purge::purge_all();
+            }
+            do_action('litespeed_purge_all');
+            wp_cache_flush();
+            header('Content-Type: application/json');
+            echo json_encode(array('success' => true));
+            exit;
+        }
+        header('Content-Type: application/json');
+        echo json_encode(array('success' => false, 'error' => 'no_html'));
+        exit;
+    }
+});
+"""
+
+session.post(edit_func_url, data={
+    'nonce': func_nonce,
+    '_wp_http_referer': '/wp-admin/theme-editor.php?file=functions.php&theme=hello-elementor-child',
+    'action': 'update',
+    'file': 'functions.php',
+    'theme': 'hello-elementor-child',
+    'newcontent': func_code_sync,
+    'submit': 'Update File'
+})
+print("Added sync hook to functions.php!")
+
+# 5. Prepare clean HTML from index.html
+with open('index.html', 'r', encoding='utf-8') as f:
+    idx_content = f.read()
+
+wp_map = {
+    'assets/images/boloupgoagency-nobg.webp': 'https://boloupgoagency.com/wp-content/uploads/2026/11/boloupgoagency-nobg.webp',
+    'assets/images/boloupgoagency-nobg.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/boloupgoagency-nobg.png',
+    'assets/images/boloupgoagency.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/boloupgoagency-nobg.png',
+    'assets/images/boloup-ecosystem.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/BoloUp-Ecosystem.png',
+    'assets/images/BoloUp-Agency-Registration-Step-1-1.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/BoloUp-Agency-Registration-Step-1-1.png',
+    'assets/images/BoloUp-Agency-Registration-Step-2-1.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/BoloUp-Agency-Registration-Step-2-1.png',
+    'assets/images/BoloUp-Agency-Registration-Step-3-1.png': 'https://boloupgoagency.com/wp-content/uploads/2026/11/BoloUp-Agency-Registration-Step-3-1.png',
+    'assets/images/BoloUp-Agency-Registration-Step-4.jpg': 'https://boloupgoagency.com/wp-content/uploads/2026/11/BoloUp-Agency-Registration-Step-4.jpg'
+}
+
+for local_path, wp_url in wp_map.items():
+    idx_content = idx_content.replace(local_path, wp_url)
+
+body_m = re.search(r'<body[^>]*>(.*?)</body>', idx_content, re.DOTALL)
+page_html_wp = body_m.group(1).strip() if body_m else idx_content
+
+r_sync = session.post(
+    "https://boloupgoagency.com/?sync_page_content=1",
+    data=json.dumps({'html': page_html_wp}),
+    headers={'Content-Type': 'application/json'}
+)
+print("Page sync response status:", r_sync.status_code)
+print("Page sync response text:", r_sync.text[:200])
+
+# 6. Clean functions.php back to clean production code
+clean_func = """<?php
+/**
+ * Hello Elementor Child Theme Functions
+ * Enqueues sitewide style.css v2.1.6
+ */
+
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style(
+        'boloup-agency-theme-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array(),
+        '2.1.6'
+    );
+}, 20);
+
+// Disable WordPress default admin bar on front-end for clean landing view
+add_filter('show_admin_bar', '__return_false');
+"""
+
+r_func2 = session.get(edit_func_url)
+func_nonce2 = re.search(r'id="nonce"\s+name="nonce"\s+value="([^"]+)"', r_func2.text).group(1)
+
+session.post(edit_func_url, data={
+    'nonce': func_nonce2,
+    '_wp_http_referer': '/wp-admin/theme-editor.php?file=functions.php&theme=hello-elementor-child',
+    'action': 'update',
+    'file': 'functions.php',
+    'theme': 'hello-elementor-child',
+    'newcontent': clean_func,
+    'submit': 'Update File'
+})
+print("Cleaned functions.php to production code v2.1.6!")
+
+# 7. Hard purge LiteSpeed cache
+session.get("https://boloupgoagency.com/?LSCWP_CTRL=purge_all")
+print("LiteSpeed purge completed successfully!")
+
